@@ -1,0 +1,6 @@
+[package]
+name = "rust-iterators-as-emojis"
+version = "0.1.0"
+authors = ["Sabree Blackmon <sabree@heavypackets.sh>"]
+
+[dependencies]
