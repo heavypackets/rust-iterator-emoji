@@ -100,13 +100,14 @@ vec![vec![🐱, 🐶, 🐦], vec![🍰, 🍔, 🍬]]
 
 [unzip](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.unzip)
 ```rust
-let (animals, foods): (Vec<Animal>, Vec<Food>) = 
+let (animals, food): (Vec<Animal>, Vec<Food>) = 
 [(🐱, 🍰), (🐶, 🍔), (🐦, 🍬)]
     .iter()
-    .unzip(food.iter());
+    .cloned()
+    .unzip();
 
-println!("{:?}", left); // [🐱, 🐶, 🐦]
-println!("{:?}", right); // [🍰, 🍔, 🍬]
+println!("{:?}", animals); // [🐱, 🐶, 🐦]
+println!("{:?}", food); // [🍰, 🍔, 🍬]
 ```
 
 [zip](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.zip)
